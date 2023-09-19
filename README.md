@@ -1,6 +1,11 @@
 # CEN4010 Fall 2023
 # Geek Text Project
 
+## History
+
+### 0.2.0
+Initial build
+
 ## Formatting
 ### Curly Braces
 The opening curly brace should be placed on the same line as the
