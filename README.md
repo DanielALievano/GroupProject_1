@@ -1,5 +1,5 @@
-# CEN4010 Fall 2023
-# Geek Text Project
+# CEN4010 Fall 2023  
+Geek Text Project
 
 ## Formatting
 ### Curly Braces
@@ -10,8 +10,7 @@ previous statement, separated by a single space
 Package names should be lowercase
 
 ### Documentation
-Label your classes with @since (version) when you first create them  
-Label your classes with @version (version) whenever you make changes you intend to push  
+Document your classes with @author (Your first name)
 
 ## Git
 ### Branch Names
