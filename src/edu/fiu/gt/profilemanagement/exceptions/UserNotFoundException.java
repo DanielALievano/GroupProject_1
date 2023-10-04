@@ -1,4 +1,4 @@
-package edu.fiu.gt.profilemanagement;
+package edu.fiu.gt.profilemanagement.exceptions;
 
 /**
  * Thrown when a user cannot be found in a given list

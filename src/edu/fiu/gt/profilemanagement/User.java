@@ -1,14 +1,23 @@
 package edu.fiu.gt.profilemanagement;
 
+import edu.fiu.gt.profilemanagement.exceptions.EmailAlreadyExistsException;
+import edu.fiu.gt.profilemanagement.exceptions.InvalidPasswordException;
+import edu.fiu.gt.profilemanagement.exceptions.UserNotFoundException;
+
 import java.util.ArrayList;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Represents a user of the Geek Text system
  *
  * @author Alvaro
  */
+
+@Entity
 public class User {
-    private final String username;
+    private @Id final String username;
     private String password;
     private String email;
     private String fName;
