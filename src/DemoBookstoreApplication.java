@@ -42,4 +42,3 @@ public class DemoBookstoreApplication {
         // Methods for managing the top ten best-sold books can be added here.
     }
 }
-}
