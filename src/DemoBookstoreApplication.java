@@ -1,4 +1,4 @@
-package com.project1_spring.demo_bookstore;
+package com.springbootproject1_spring.demo_bookstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
