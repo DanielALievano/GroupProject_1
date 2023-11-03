@@ -9,6 +9,9 @@ import java.util.List;
 public class BookRatingCommenting {
     private String title;
 
+    public BookRatingCommenting(String title2) {
+    }
+
     public String Books(String title) {
         this.title = title;
         return title;
@@ -22,8 +25,8 @@ public class BookRatingCommenting {
 // Rating class to represent a rating for a book
 class Rating {
     private int rating;
-    private String userId;
-    private String bookTitle;
+    String userId;
+    String bookTitle;
     private Date date;
 
     public Rating(int rating, String userId, String bookTitle) {
@@ -41,7 +44,7 @@ class Rating {
 // Comment class to represent a comment for a book
 class Comment {
     private String text;
-    private String userId;
+    String userId;
     String bookTitle;
     private Date date;
 
@@ -64,7 +67,7 @@ class BookStore {
     private List<Comment> comments = new ArrayList<>();
 
     public void addBook(String title) {
-        books.add(new Book(title));
+        books.add(new BookRatingCommenting(title));
     }
 
     public void createRating(int rating, String userId, String bookTitle) {
