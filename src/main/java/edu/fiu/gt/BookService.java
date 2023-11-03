@@ -1,8 +1,8 @@
-package com.geektext.bookstore.services;
+package edu.fiu.gt;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.geektext.bookstore.repositories.BookRepository;
+import edu.fiu.gt.BookRepository;
 
 @Service
 public class BookService {

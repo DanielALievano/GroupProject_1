@@ -1,7 +1,7 @@
-package com.geektext.bookstore.controllers;
+package edu.fiu.gt;
 
-import com.geektext.bookstore.repositories.Book;
-import com.geektext.bookstore.repositories.BookRepository;
+import edu.fiu.gt.Book;
+import edu.fiu.gt.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

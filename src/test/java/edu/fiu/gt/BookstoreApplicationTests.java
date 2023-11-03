@@ -1,4 +1,4 @@
-package com.geektext.bookstore;
+package edu.fiu.gt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,5 +9,4 @@ class BookstoreApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
