@@ -1,4 +1,4 @@
-package edu.fiu.gt;
+package edu.fiu.gt.bookratingcommenting;
 
 
 import java.util.ArrayList;
