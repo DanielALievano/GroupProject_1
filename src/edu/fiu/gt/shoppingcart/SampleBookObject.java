@@ -1,4 +1,4 @@
-package shoppingcart;
+package edu.fiu.gt.shoppingcart;
 
 public class Book {
     private String id;

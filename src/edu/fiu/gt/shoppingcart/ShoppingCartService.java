@@ -1,4 +1,4 @@
-package shoppingcart;
+package edu.fiu.gt.shoppingcart;
 
 import org.springframework.stereotype.Service;
 import java.util.List;

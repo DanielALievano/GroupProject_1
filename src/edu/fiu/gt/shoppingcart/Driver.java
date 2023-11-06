@@ -1,4 +1,4 @@
-package shoppingcart;
+package edu.fiu.gt.shoppingcart;
 
 import java.util.ArrayList;
 import java.util.HashMap;

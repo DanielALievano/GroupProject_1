@@ -1,4 +1,4 @@
-package shoppingcart;
+package edu.fiu.gt.shoppingcart;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
