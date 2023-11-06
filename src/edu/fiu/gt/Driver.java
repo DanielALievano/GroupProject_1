@@ -1,12 +1,9 @@
 package edu.fiu.gt;
 
-/**
- * Driver for the Geek Text system
- *
- * @author Alvaro
- */
+import org.springframework.boot.SpringApplication;
+
 public class Driver {
     public static void main(String[] args) {
-        System.out.println("Successfully compiled.");
+        SpringApplication.run(Driver.class, args);
     }
 }
