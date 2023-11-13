@@ -1,6 +1,6 @@
 package edu.fiu.gt.bookdetails;
 
-import edu.fiu.gt.Author;
+
 
 import javax.persistence.*;
 
