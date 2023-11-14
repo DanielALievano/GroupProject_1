@@ -22,4 +22,11 @@ public class BookController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PostMapping("/")
+    public ResponseEntity<Void> createBook(@RequestBody Book book) {
+        bookRepository.save(book);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+}
 }
