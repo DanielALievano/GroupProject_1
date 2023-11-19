@@ -1,84 +1,77 @@
 package edu.fiu.gt.bookratingcommenting;
 
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-// Book class to represent a book
+@SpringBootApplication
+@RestController
+@RequestMapping("/api/books")
 public class BookRatingCommenting {
-    private String title;
 
-    public BookRatingCommenting(String title2) {
+    private final List<BookRatingCommenting> books = new ArrayList<>();
+    private final List<Rating> ratings = new ArrayList<>();
+    private final List<Comment> comments = new ArrayList<>();
+
+    public static void main(String[] args) {
+        SpringApplication.run(BookRatingCommenting.class, args);
     }
 
-    public String Books(String title) {
-        this.title = title;
-        return title;
+    // Book class to represent a book
+    private static class BookRatingCommenting {
+        private String title;
+
+        public String Books(String title) {
+            this.title = title;
+            return title;
+        }
+
+        public String getTitle() {
+            return title;
+        }
     }
 
-    public String getTitle() {
-        return title;
-    }
-}
+    // Rating class to represent a rating for a book
+    private static class Rating {
+        private int rating;
+        String userId;
+        String bookTitle;
+        private Date date;
 
-// Rating class to represent a rating for a book
-class Rating {
-    private int rating;
-    String userId;
-    String bookTitle;
-    private Date date;
-
-    public Rating(int rating, String userId, String bookTitle) {
-        this.rating = rating;
-        this.userId = userId;
-        this.bookTitle = bookTitle;
-        this.date = new Date(); // Set the current date
+        public int getRating() {
+            return rating;
+        }
     }
 
-    public int getRating() {
-        return rating;
-    }
-}
+    // Comment class to represent a comment for a book
+    private static class Comment {
+        private String text;
+        String userId;
+        String bookTitle;
+        private Date date;
 
-// Comment class to represent a comment for a book
-class Comment {
-    private String text;
-    String userId;
-    String bookTitle;
-    private Date date;
-
-    public Comment(String text, String userId, String bookTitle) {
-        this.text = text;
-        this.userId = userId;
-        this.bookTitle = bookTitle;
-        this.date = new Date(); // Set the current date
+        public String getText() {
+            return text;
+        }
     }
 
-    public String getText() {
-        return text;
-    }
-}
-
-// BookStore class to manage books, ratings, and comments
-class BookStore {
-    private List<BookRatingCommenting> books = new ArrayList<>();
-    private List<Rating> ratings = new ArrayList<>();
-    private List<Comment> comments = new ArrayList<>();
-
-    public void addBook(String title) {
-        books.add(new BookRatingCommenting(title));
+    @PostMapping("/rate")
+    public void createRating(@RequestBody Rating rating) {
+        ratings.add(rating);
     }
 
-    public void createRating(int rating, String userId, String bookTitle) {
-        ratings.add(new Rating(rating, userId, bookTitle));
+    @PostMapping("/comment")
+    public void createComment(@RequestBody Comment comment) {
+        comments.add(comment);
     }
 
-    public void createComment(String text, String userId, String bookTitle) {
-        comments.add(new Comment(text, userId, bookTitle));
-    }
-
-    public List<Rating> getRatingsForBook(String bookTitle) {
+    @GetMapping("/ratings/{bookTitle}")
+    public List<Rating> getRatingsForBook(@PathVariable String bookTitle) {
         List<Rating> bookRatings = new ArrayList<>();
         for (Rating rating : ratings) {
             if (rating.bookTitle.equals(bookTitle)) {
@@ -88,7 +81,8 @@ class BookStore {
         return bookRatings;
     }
 
-    public List<Comment> getCommentsForBook(String bookTitle) {
+    @GetMapping("/comments/{bookTitle}")
+    public List<Comment> getCommentsForBook(@PathVariable String bookTitle) {
         List<Comment> bookComments = new ArrayList<>();
         for (Comment comment : comments) {
             if (comment.bookTitle.equals(bookTitle)) {
@@ -96,35 +90,6 @@ class BookStore {
             }
         }
         return bookComments;
-    }
-
-    public static void main(String[] args) {
-        BookStore bookStore = new BookStore();
-
-        // Add books
-        bookStore.addBook("Book 1");
-        bookStore.addBook("Book 2");
-
-        // Create ratings and comments
-        bookStore.createRating(4, "User1", "Book 1");
-        bookStore.createRating(5, "User2", "Book 1");
-        bookStore.createComment("Great book!", "User1", "Book 1");
-        bookStore.createComment("Enjoyed it!", "User2", "Book 1");
-
-        // Retrieve ratings and comments for a book
-        List<Rating> book1Ratings = bookStore.getRatingsForBook("Book 1");
-        List<Comment> book1Comments = bookStore.getCommentsForBook("Book 1");
-
-        // Display ratings and comments
-        System.out.println("Ratings for Book 1:");
-        for (Rating rating : book1Ratings) {
-            System.out.println("Rating: " + rating.getRating() + " by " + rating.userId);
-        }
-
-        System.out.println("\nComments for Book 1:");
-        for (Comment comment : book1Comments) {
-            System.out.println("Comment: " + comment.getText() + " by " + comment.userId);
-        }
     }
 }
 
