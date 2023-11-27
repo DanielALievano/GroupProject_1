@@ -1,7 +1,7 @@
 package edu.fiu.gt.bookdetails;
 
 import javax.persistence.*;
-
+import java.util.List;
 @Entity
 @Table(name = "edu.fiu.gt.Author")
 public class Author {
@@ -22,6 +22,8 @@ public class Author {
 
     @Column(name = "Publisher")
     private String publisher;
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
+    private List<Book> books;
 
     // Getters and Setters
     public Long getAuthorId() {
