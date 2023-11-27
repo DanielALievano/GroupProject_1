@@ -6,18 +6,14 @@ import edu.fiu.gt.profilemanagement.exceptions.UserNotFoundException;
 
 import java.util.ArrayList;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
  * Represents a user of the Geek Text system
  *
  * @author Alvaro
  */
 
-@Entity
 public class User {
-    private @Id final String username;
+    private final String username;
     private String password;
     private String email;
     private String fName;
