@@ -13,7 +13,7 @@ public class BookService {
     private BookRepository bookRepository;
 
     @Autowired
-    private AuthorRepository authorRepository; // Assuming you have an AuthorRepository similar to BookRepository
+    private AuthorRepository authorRepository;
 
     // Method to add a book
     public Book createBook(Book book) {
