@@ -1,4 +1,4 @@
-package edu.fiu.gt.bookdetails;
+package bookdetails;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

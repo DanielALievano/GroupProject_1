@@ -1,4 +1,4 @@
-package edu.fiu.gt.bookdetails;
+package bookdetails;
 
 import org.testng.annotations.Test;
 import org.springframework.boot.test.context.SpringBootTest;

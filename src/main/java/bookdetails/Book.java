@@ -1,11 +1,11 @@
-package edu.fiu.gt.bookdetails;
+package bookdetails;
 
 
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "com.geektext.bookstore.repositories.edu.fiu.gt.Book")
+@Table(name = "Book")
 public class Book {
 
     @Id

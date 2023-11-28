@@ -1,4 +1,4 @@
-package edu.fiu.gt.bookdetails;
+package bookdetails;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;

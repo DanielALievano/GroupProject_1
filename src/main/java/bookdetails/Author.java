@@ -1,9 +1,9 @@
-package edu.fiu.gt.bookdetails;
+package bookdetails;
 
 import javax.persistence.*;
 import java.util.List;
 @Entity
-@Table(name = "edu.fiu.gt.Author")
+@Table(name = "Author")
 public class Author {
 
     @Id
@@ -11,10 +11,10 @@ public class Author {
     @Column(name = "AuthorId")
     private Long authorId;
 
-    @Column(name = "First Name")
+    @Column(name = "First_Name")
     private String firstName;
 
-    @Column(name = "Last Name")
+    @Column(name = "Last_Name")
     private String lastName;
 
     @Column(name = "Biography")
