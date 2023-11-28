@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 /**
- * Represents a user of the Geek Text system
+ * Represents a user entity.
  *
  * @author Alvaro
  */

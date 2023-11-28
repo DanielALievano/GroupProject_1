@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 /**
- * Represents a credit card that belongs to a User
+ * Represents a CreditCard entity that belongs to a User (Many To One).
  *
  * @author Alvaro
  */

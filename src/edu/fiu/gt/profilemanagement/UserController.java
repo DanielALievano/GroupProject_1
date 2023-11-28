@@ -6,8 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
+/**
+ * RESTful controller for the User entity. Handles Get, Post, and Put requests.
+ *
+ * @author Alvaro
+ */
 @RestController
 @RequestMapping("/users")
 public class UserController {

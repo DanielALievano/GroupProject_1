@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * RESTful controller for the CreditCard entity. Handles Get and Post requests.
+ *
+ * @author Alvaro
+ */
 @RestController
 @RequestMapping("/cards")
 public class CreditCardController {

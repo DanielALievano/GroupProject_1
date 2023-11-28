@@ -4,8 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
+/**
+ * RESTful service for User entities.
+ *
+ * @author Alvaro
+ */
 @Service
 public class UserService {
     private final UserRepository repository;

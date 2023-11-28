@@ -1,7 +1,7 @@
 package edu.fiu.gt.profilemanagement;
 
 /**
- * Represents a Credit Card POST request. Decoupled from Credit Card due to userId needing to be separate
+ * Represents a Credit Card POST request. Decoupled from Credit Card due to userId needing to be separate.
  *
  * @author Alvaro
  */

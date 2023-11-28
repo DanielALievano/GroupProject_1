@@ -6,6 +6,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * RESTful service for the CreditCard entity. Middleman between controller and repository.
+ *
+ * @author Alvaro
+ */
 @Service
 public class CreditCardService {
     @Autowired
