@@ -53,6 +53,8 @@ public class UserController {
 
     @PutMapping("/{username}")
     public ResponseEntity<User> updateUser(@PathVariable String username, @RequestBody User newUser) {
+        if(newUser.getEmail() != null)
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         User updatedUser = service.updateUser(username, newUser);
         if(updatedUser == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

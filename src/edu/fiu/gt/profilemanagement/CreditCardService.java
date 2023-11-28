@@ -31,9 +31,9 @@ public class CreditCardService {
         CreditCard creditCard = new CreditCard();
         creditCard.setNumber(request.getNumber());
         creditCard.setSecurityCode(request.getSecurityCode());
-        User user = userService.getUserById(request.getUserId());
+        User user = userService.getUserByUsername(request.getUsername());
         if(user == null) {
-            throw new EntityNotFoundException("User " + request.getUserId() + " not found");
+            throw new EntityNotFoundException("User " + request.getUsername() + " not found");
         } else {
             creditCard.setUserOwner(user);
         }
