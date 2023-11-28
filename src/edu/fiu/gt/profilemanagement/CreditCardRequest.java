@@ -8,7 +8,7 @@ package edu.fiu.gt.profilemanagement;
 public class CreditCardRequest {
     private String number;
     private String securityCode;
-    private Long userId;
+    private String username;
 
     public String getNumber() {
         return number;
@@ -26,11 +26,11 @@ public class CreditCardRequest {
         this.securityCode = securityCode;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
